@@ -2,7 +2,9 @@
 
 Starter pack for [Project Euler](https://projecteuler.net/archives). Written in `Javascript`, running on `node.js`, locally hosted in an aesthetically elegant website.
 
-![What the website looks like.](demo.png)
+<center>
+  <img src="demo.png" alt="What the website looks like." width="500"/>
+</center>
 
 ## How to use
 
