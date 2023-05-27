@@ -18,14 +18,12 @@ Now open `localhost:3000` in your browser. The first loading would take a while 
 
 Every time you finish a `js` file in the `scripts` folder, just refresh any page, and the server would run the `js` file, get the answer, then generate the corresponding `html` file. Note that if you accidentally made an infinite loop, you're out of luck and would have to kill the server. I would have coded in an automatic time-out, but it's hard to figure out how long to wait, since some problems could take minutes to finish computing, so please just use your own judgment.
 
-To get started, the `scripts` folder contains the first 100 problems. Just replace the `0` in this function:
+To solve a problem, go to the `scripts` folder. Replace the `0` in this function of each file:
 ```javascript
 exports.solution = () => {
     return 0;
 };
 ```
-
-You can just run this once and 
 
 You can find [solutions online](https://github.com/luckytoilet/projecteuler-solutions/blob/master/Solutions.md). I don't think it's cheating to have numerical solutions. After all, you still have to code up your solutions.
 
