@@ -1,0 +1,7 @@
+# Ignore all .json files
+*.json
+
+# Allow the public and scripts folders
+/*
+!/public/
+!/scripts/
