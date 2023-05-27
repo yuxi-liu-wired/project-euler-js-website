@@ -9,7 +9,7 @@ const port = 3000;
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-rebuild_scripts(10);
+rebuild_scripts(20);
 
 app.get('/', (req, res) => {
   rebuild_site();
@@ -64,12 +64,13 @@ function rebuild_site() {
       fs.mkdirSync("pages/problem", { recursive: true });
     }
     
-    let links = '';
+    const numbers = [];
 
     const files = fs.readdirSync(`${__dirname}/scripts`);
     files.forEach(file => {
       if (/[0-9]\.js$/.test(file)) {
         const problemNumber = path.basename(file, path.extname(file));
+        numbers.push(parseInt(problemNumber));
         const problemPath = path.join(__dirname, `scripts/${file}`);
         const pagePath = path.join(__dirname, `pages/problem/${problemNumber}.html`)
         
@@ -81,8 +82,6 @@ function rebuild_site() {
         } catch (error) {
             htmlModTime = null;
         }
-        // console.log(`checking problem ${problemNumber}...`)
-        // console.log(`jsModTime = ${jsModTime}, htmlModTime = ${htmlModTime}.`)
   
         if (!htmlModTime || jsModTime > htmlModTime) {
           delete require.cache[require.resolve(problemPath)];
@@ -109,14 +108,16 @@ function rebuild_site() {
             console.error(`Error processing problem ${problemNumber}: ${err}`);
           }
         }
-  
-        links += `<a href="problem/${problemNumber}.html">Problem ${problemNumber}</a><br>`;
       }
     });
   
-    const html = `<link rel="stylesheet" href="/style.css">
-      <h1>Euler Problems</h1><hr>
-      ${links}
-    `;
+    numbers.sort(function (a, b) {  return a - b;  });
+
+    let html = `<link rel="stylesheet" href="/style.css">
+<h1>Euler Problems</h1><hr>`;
+    for (const i of numbers) {
+        html += `<a href="problem/${i}.html">Problem ${i}</a><br>`;
+    }
+
     fs.writeFileSync(`pages/index.html`, html);
 }
