@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/style.css">
+<h1>Problem {{problemNumber}}: {{title}}</h1>
+{{{statement}}}<hr>
+<p>Answer: {{solution}}</p>
+<button id="showAnswerButton">Show real answer</button>
+<p id="newNumber" style="display: none;"></p>
+<a href="/">Back to index</a>
+<script>
+  const showAnswerButton = document.getElementById('showAnswerButton');
+  const answer = document.getElementById('answer');
+  const newNumber = document.getElementById('newNumber');
+
+  showAnswerButton.addEventListener('click', () => {
+    newNumber.textContent = "{{answer}}";
+    newNumber.style.display = 'block';
+  });
+</script>

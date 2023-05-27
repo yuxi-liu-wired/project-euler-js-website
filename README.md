@@ -10,9 +10,11 @@ Starter pack for [Project Euler](https://projecteuler.net/archives). Written in 
 ```bash
 cd project-euler-js-website
 npm init -y
-npm install express
+npm install express axios cheerio handlebars
 node index.js
 ```
+
+If you want to load more than the first 20 problems, change the line `rebuild_scripts(20);` in `index.js`.
 
 Now open `localhost:3000` in your browser. The first loading would take a while as it generates all the `html` pages, but after that it would only regenerate the pages if you update the corresponding `js` file.
 
@@ -31,3 +33,5 @@ You can find [solutions online](https://github.com/luckytoilet/projecteuler-solu
 ## Credits
 
 The CSS file used is MIT licensed from [`Simple.css` by Kev Quirk](https://github.com/kevquirk/simple.css).
+
+The answers in `ansewrs.txt` are from [luckytoilet/projecteuler-solutions: Numerical answers to all Project Euler problems](https://github.com/luckytoilet/projecteuler-solutions).

@@ -2,6 +2,7 @@
 *.json
 
 # Allow the public and scripts folders
-/*
+/pages
+/node_modules
 !/public/
 !/scripts/
