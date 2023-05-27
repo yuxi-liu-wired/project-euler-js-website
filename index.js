@@ -9,7 +9,7 @@ const port = 3000;
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-rebuild_scripts(20);
+rebuild_scripts(100);
 
 app.get('/', (req, res) => {
   rebuild_site();
