@@ -2,6 +2,8 @@
 
 Starter pack for [Project Euler](https://projecteuler.net/archives). Written in `Javascript`, running on `node.js`, locally hosted in an aesthetically elegant website.
 
+![What the website looks like.](demo.png)
+
 ## How to use
 
 * Install `Node.js` and `npm`
