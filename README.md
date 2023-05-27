@@ -31,6 +31,19 @@ exports.solution = () => {
 };
 ```
 
+For example, this is in my `1.js`:
+```javascript
+exports.solution = () => {
+    let ans = 0;
+    for (let i = 1; i < 1000; i++){
+        if (i % 3 === 0 || i % 5 === 0) {
+            ans += i;
+        }
+    }
+    return ans;
+};
+```
+
 You can find [solutions online](https://github.com/luckytoilet/projecteuler-solutions/blob/master/Solutions.md). I don't think it's cheating to have numerical solutions. After all, you still have to code up your solutions.
 
 ## Dependencies
