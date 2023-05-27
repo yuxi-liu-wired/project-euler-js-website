@@ -1,6 +1,3 @@
-# Ignore all .json files
-*.json
-
 # Allow the public and scripts folders
 /pages
 /node_modules

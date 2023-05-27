@@ -9,8 +9,7 @@ Starter pack for [Project Euler](https://projecteuler.net/archives). Written in 
 
 ```bash
 cd project-euler-js-website
-npm init -y
-npm install express axios cheerio handlebars
+npm install
 node index.js
 ```
 
@@ -29,6 +28,17 @@ exports.solution = () => {
 ```
 
 You can find [solutions online](https://github.com/luckytoilet/projecteuler-solutions/blob/master/Solutions.md). I don't think it's cheating to have numerical solutions. After all, you still have to code up your solutions.
+
+## Dependencies
+
+```json
+"dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7"
+}
+```
 
 ## Credits
 
