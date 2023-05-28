@@ -1,17 +1,30 @@
-<link rel="stylesheet" href="/style.css">
-<h1>Problem {{problemNumber}}: {{title}}</h1>
-{{{statement}}}<hr>
-<p>Answer: {{solution}}</p>
-<button id="showAnswerButton">Show real answer</button>
-<p id="newNumber" style="display: none;"></p>
-<a href="/">Back to index</a>
-<script>
-  const showAnswerButton = document.getElementById('showAnswerButton');
-  const answer = document.getElementById('answer');
-  const newNumber = document.getElementById('newNumber');
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem {{problemNumber}}: {{title}}</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="js/mathjax_config.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <h1>Problem {{problemNumber}}: {{title}}</h1>
+  {{{statement}}}<hr>
+  <p>Answer: {{solution}}</p>
+  <button id="showAnswerButton">Show real answer</button>
+  <p id="newNumber" style="display: none;"></p>
+  <a href="/">Back to index</a>
+  <script>
+    const showAnswerButton = document.getElementById('showAnswerButton');
+    const answer = document.getElementById('answer');
+    const newNumber = document.getElementById('newNumber');
 
-  showAnswerButton.addEventListener('click', () => {
-    newNumber.textContent = "{{answer}}";
-    newNumber.style.display = 'block';
-  });
-</script>
+    showAnswerButton.addEventListener('click', () => {
+      newNumber.textContent = "{{answer}}";
+      newNumber.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
